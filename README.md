@@ -4,33 +4,45 @@ This project implements an end-to-end Fake News Detection system using Natural L
 
 ## Project Structure
 
-├─ data/
-│ ├─ train.tsv
-│ ├─ valid.tsv
-│ ├─ test.tsv
-├─ notebooks/
-│ ├─ fake_news_model.ipynb
-├─ scripts/
-│ ├─ preprocess.py
-│ ├─ train_model.py
-│ ├─ evaluate.py
-│ └─ predict.py
-├─ outputs/
-│ ├─ confusion_matrix.png
-│ ├─ roc_curve.png
-├─ README.md
-├─ requirements.txt
+```text
+FakeNewsDetection/
+│
+├── data/
+│   ├── train.tsv
+│   ├── valid.tsv
+│   └── test.tsv
+│
+├── notebooks/
+│   └── fake_news_model.ipynb
+│
+├── scripts/
+│   ├── preprocess.py
+│   ├── train_model.py
+│   ├── evaluate.py
+│   └── predict.py
+│
+├── outputs/
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
+├── requirements.txt
+└── README.md
 
-## Features
+## Description
 
-- Data cleaning and preprocessing
-- TF-IDF vectorization
-- Logistic Regression model
-- Model evaluation: Accuracy, Classification Report, Confusion Matrix
-- Top contributing words for fake and real news
+- **Data:** Liar dataset for training and testing.
+- **Notebooks:** Contains exploratory data analysis and model experiments.
+- **Scripts:** Ready-to-use Python scripts for preprocessing, training, evaluation, and prediction.
+- **Outputs:** Store visualizations, confusion matrices, and model results.
+- **Requirements:** All Python dependencies for running the project.
 
-## How to Run
+## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/YourUsername/FakeNewsDetection.git
+# Clone the repo
+git clone https://github.com/SankarapuKavya/FakeNewsDetection.git
+
+# Navigate to project folder
+cd FakeNewsDetection
+
+# Install dependencies
+pip install -r requirements.txt
