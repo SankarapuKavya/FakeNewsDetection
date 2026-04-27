@@ -6,44 +6,75 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #1e1e2f, #2b5876);
             text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            width: 50%;
+            width: 55%;
             margin: auto;
-            margin-top: 50px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 60px;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            margin-bottom: 20px;
         }
 
         textarea {
             width: 90%;
-            height: 120px;
-            padding: 10px;
+            height: 140px;
+            padding: 12px;
             font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
         }
 
         button {
-            padding: 10px 20px;
+            margin-top: 15px;
+            padding: 12px 25px;
             font-size: 16px;
-            background-color: #007BFF;
+            background: #00c6ff;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background: #0072ff;
+            transform: scale(1.05);
         }
 
         h2 {
-            margin-top: 20px;
+            margin-top: 25px;
+            font-size: 24px;
         }
+
+        /* Result styling */
+        .fake {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        .real {
+            color: #00ff99;
+            font-weight: bold;
+        }
+
+        .neutral {
+            color: #ffd700;
+        }
+
     </style>
 
 </head>
@@ -51,17 +82,23 @@
 
     <div class="container">
 
-        <h1>Fake News Detection System</h1>
+        <h1>📰 Fake News Detection System</h1>
 
         <form action="/predict" method="post">
             <textarea name="news" placeholder="Enter news statement here..."></textarea>
-
-            <br><br>
-
+            <br>
             <button type="submit">Check News</button>
         </form>
 
-        <h2>{{ prediction_text }}</h2>
+        <!-- Result -->
+        {% if prediction_text %}
+            <h2
+                class="{% if 'Fake' in prediction_text %}fake
+                        {% elif 'Real' in prediction_text %}real
+                        {% else %}neutral{% endif %}">
+                {{ prediction_text }}
+            </h2>
+        {% endif %}
 
     </div>
 
