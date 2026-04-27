@@ -101,4 +101,4 @@ Model was evaluated using standard classification metrices.
 
 ##  Live Demo
 
- https://your-render-app.onrender.com
+ https://fakenewsdetection-u2zy.onrender.com
