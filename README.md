@@ -5,6 +5,7 @@ A Machine Learning project to classify news articles as **Fake or Real** using N
 ---
 
 ##  Project Structure
+```bash
 
 FakeNewsDetection/
 │
@@ -28,6 +29,7 @@ FakeNewsDetection/
 │
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
