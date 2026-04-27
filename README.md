@@ -7,27 +7,24 @@ A Machine Learning project to classify news articles as **Fake or Real** using N
 ##  Project Structure
 ```bash
 
-FakeNewsDetection/
+Fake News Detection/
 │
-├── data/
-│   ├── train.tsv
-│   ├── valid.tsv
-│   └── test.tsv
+├── app.py
+├── model.pkl
+├── vectorizer.pkl
 │
-├── notebooks/
-│   └── fake_news_model.ipynb
+├── templates/
+│     └── index.html
 │
-├── scripts/
-│   ├── preprocess.py
-│   ├── train_model.py
-│   ├── evaluate.py
-│   └── predict.py
+├── static/
 │
-├── outputs/
-│   ├── confusion_matrix.png
-│   └── roc_curve.png
+├── images/
+│   ├── Confusion Matrix.png
+│   ├── ROC Curve.png
+│   └── Top words indicating FAKE news.png
 │
 ├── requirements.txt
+├── Procfile
 └── README.md
 ```
 
