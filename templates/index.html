@@ -3,6 +3,9 @@
 <head>
     <title>Fake News Detection</title>
 
+    <!-- CSS Link (IMPORTANT for Render projects) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,7 +63,6 @@
             font-size: 24px;
         }
 
-        /* Result styling */
         .fake {
             color: #ff4d4d;
             font-weight: bold;
@@ -78,6 +80,7 @@
     </style>
 
 </head>
+
 <body>
 
     <div class="container">
@@ -85,7 +88,7 @@
         <h1>📰 Fake News Detection System</h1>
 
         <form action="/predict" method="post">
-            <textarea name="news" placeholder="Enter news statement here..."></textarea>
+            <textarea name="news" placeholder="Enter news statement here..." required></textarea>
             <br>
             <button type="submit">Check News</button>
         </form>
