@@ -81,22 +81,11 @@ python scipts/evaluate.py
 python scripts/predict.py
 ```
 
-## 📊 Model Visualizations
+## 📊 Model Performance
+---
 
-### Class Distribution in Training Data
-![Class Distribution](images/class_distribution_train.png)
+Model was evaluated using standard classification metrices.
 
-### Confusion Matrix
-![Confusion Matrix](images/confusion_matrix.png)
-
-### Statement Length Distribution by Class
-![Statement Length](images/statement_length_distribution.png)
-
-### Text Length by Class
-![Text Length](images/text_length_by_class.png)
-
-### Overall Class Distribution
-![Class Distribution](images/class_distribution.png)
 ---
 
 ##  Tech Stack
