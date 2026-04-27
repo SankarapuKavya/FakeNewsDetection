@@ -17,6 +17,7 @@ Fake News Detection/
 │     └── index.html
 │
 ├── static/
+│     └── style.css
 │
 ├── images/
 │   ├── Confusion Matrix.png
